@@ -49,3 +49,20 @@ jobs:
         with:
           name: java-app
           path: target/*.jar
+
+  deploy:
+
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Fake deploy start
+        run: echo "Iniciando despliegue..."
+
+      - name: Deploy application
+        run: echo "Aplicación desplegada correctamente"
+
+      - name: Health check
+        run: echo "Servidor funcionando OK"
