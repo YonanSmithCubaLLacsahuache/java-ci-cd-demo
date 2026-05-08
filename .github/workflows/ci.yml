@@ -26,8 +26,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Verify Java
+        run: java -version
+
       - name: Verify Maven
         run: mvn -version
+
+      - name: Clean project
+        run: mvn clean
 
       - name: Compile project
         run: mvn compile
@@ -35,7 +41,7 @@ jobs:
       - name: Run tests
         run: mvn test
 
-      - name: Package application
+      - name: Package project
         run: mvn package
 
       - name: Upload JAR artifact
