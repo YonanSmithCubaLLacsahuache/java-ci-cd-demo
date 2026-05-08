@@ -13,6 +13,6 @@ public class AppTest {
 
         int resultado = app.sumar(2, 3);
 
-        assertEquals(5, resultado);
+        assertEquals(10, resultado);
     }
 }
